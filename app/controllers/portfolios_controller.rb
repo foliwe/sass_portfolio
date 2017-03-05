@@ -11,7 +11,7 @@ class PortfoliosController < ApplicationController
   def create
     @Portfolio = Portfolio.new(portfolio_params)
     respond_to do |format|
-      if @Portfolio .save
+      if @Portfolio.save
         format.html { redirect_to portfolios_path , notice: 'Portfolio indewas successfully created.' }
         format.json { render :show, status: :created, location: @Portfolio  }
       else
@@ -21,11 +21,22 @@ class PortfoliosController < ApplicationController
     end
   end
   def edit
-    @portfolio = Portfolio.find(params[:id])
+    @Portfolio = Portfolio.find(params[:id])
   end
 
   def update
+     @Portfolio = Portfolio.find(params[:id])
+    respond_to do |format|
+      if @Portfolio.update(portfolio_params)
+        format.html { redirect_to portfolios_path , notice: 'Portfolio indewas successfully created.' }
+        format.json { render :show, status: :created, location: @Portfolio  }
+      else
+        format.html { render :new }
+        format.json { render json: @Portfolio .errors, status: :unprocessable_entity }
+      end
+    end
   end
+
 
   private
 
