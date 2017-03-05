@@ -1,0 +1,10 @@
+<h2>PORTFOLIO</h2>
+
+<% @Portfolios.each do |ptf_item| %>
+    <%= ptf_item.title %> <br>
+    <%= ptf_item.subtitle %> <br>
+    <%= ptf_item.body %> <br>
+    <%= image_tag ptf_item.thumb_image unless ptf_item.thumb_image.nil? %>
+    <hr>
+
+<%end%>
