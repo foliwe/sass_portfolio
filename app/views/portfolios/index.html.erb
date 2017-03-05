@@ -1,7 +1,7 @@
 <h2>PORTFOLIO</h2>
 <p><%= link_to "New Portfolio", new_portfolio_path %></p>
 <% @Portfolios.each do |ptf_item| %>
-    <%= link_to ptf_item.title, portfolio_path(ptf_item)%> <br>
+    <%= link_to ptf_item.title, portfolio_show_path(ptf_item)%> <br>
     <%= ptf_item.subtitle %> <br>
     <p><%= ptf_item.body %> </p>
     <%= link_to image_tag ptf_item.thumb_image unless ptf_item.thumb_image.nil? %> <br>
