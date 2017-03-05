@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :find_portfolio, except: [:index, :new, :create]
 
   def index
     @Portfolios = Portfolio.all
@@ -13,28 +14,27 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       if @Portfolio.save
         format.html { redirect_to portfolios_path , notice: 'Portfolio indewas successfully created.' }
-        format.json { render :show, status: :created, location: @Portfolio  }
       else
         format.html { render :new }
-        format.json { render json: @Portfolio .errors, status: :unprocessable_entity }
       end
     end
   end
+
   def edit
-    @Portfolio = Portfolio.find(params[:id])
   end
 
   def update
-     @Portfolio = Portfolio.find(params[:id])
     respond_to do |format|
       if @Portfolio.update(portfolio_params)
-        format.html { redirect_to portfolios_path , notice: 'Portfolio indewas successfully created.' }
-        format.json { render :show, status: :created, location: @Portfolio  }
+        format.html { redirect_to portfolios_path , notice: 'Portfolio was successfully created.' }
       else
-        format.html { render :new }
-        format.json { render json: @Portfolio .errors, status: :unprocessable_entity }
+        format.html { render :edit }
       end
     end
+  end
+
+  def show 
+     
   end
 
 
@@ -42,6 +42,10 @@ class PortfoliosController < ApplicationController
 
   def portfolio_params
     params.require(:portfolio).permit(:title,:subtitle,:body)
+  end
+
+  def find_portfolio
+    @Portfolio = Portfolio.find(params[:id])
   end
     
 end
