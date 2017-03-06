@@ -1,8 +1,12 @@
 class PortfoliosController < ApplicationController
-  before_action :find_portfolio, except: [:index, :new, :create]
+  before_action :find_portfolio, only: [:edit, :show, :update, :destroy]
 
   def index
     @Portfolios = Portfolio.all
+  end
+
+  def angular
+    @Portfolios_angular = Portfolio.angular
   end
 
   def new
