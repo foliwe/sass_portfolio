@@ -2,6 +2,10 @@
 
 <h1>Blogs</h1>
 
+
+<%= link_to 'New Blog', new_blog_path %>
+
+
 <table>
   <thead>
     <tr>
@@ -14,7 +18,7 @@
   <tbody>
     <% @blogs.each do |blog| %>
       <tr>
-        <td><%= blog.title %></td>
+        <td><%= blog.title%></td>
         <td><%= blog.body %></td>
         <td><%= link_to blog.post_status, toggle_status_blog_path(blog)%></td>
         <td><%= link_to 'Show', blog %></td>
@@ -26,5 +30,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Blog', new_blog_path %>
