@@ -48,7 +48,16 @@ end
       )
   end
 
+  3.times do |techno|
+    Technology.create!(
+      name:"Rails#{techno}",
+      portfolio_id: Portfolio.first.id
+      )
+  end
+
+
   puts "10 Blog created"
 
   puts "9 Portfolios created"
   puts "5 skills created"
+  puts "3 Technologies created"
