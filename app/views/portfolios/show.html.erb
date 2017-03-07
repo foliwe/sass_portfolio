@@ -2,3 +2,7 @@
 <p><h2><%= @Portfolio.title %></h2></p>
 <p><em><%= @Portfolio.subtitle %></em></p>
 <p><%= @Portfolio.body %></p>
+<h4>Technologies Used</h4>
+<% @Portfolio.technologies.each do |techno| %>
+<p><%= techno.name %></p>
+<%end %>

@@ -1,12 +1,17 @@
 class PortfoliosController < ApplicationController
-  before_action :find_portfolio, except: [:index, :new, :create]
+  before_action :find_portfolio, only: [:edit, :show, :update, :destroy]
 
   def index
     @Portfolios = Portfolio.all
   end
 
+  def angular
+    @Portfolios_angular = Portfolio.angular
+  end
+
   def new
     @Portfolio = Portfolio.new
+    3.times {@Portfolio.technologies.build}
   end
 
   def create
@@ -47,7 +52,7 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title,:subtitle,:body)
+    params.require(:portfolio).permit(:title,:subtitle,:body,technologies_attributes: [:name])
   end
 
   def find_portfolio
