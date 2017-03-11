@@ -5,7 +5,7 @@ module DefaultPageContent
   end
 
   def set_page_defaults
-    @page_title ="My SassPortfolio Wesite"
+    @page_title ="My SassPortfolio Website"
     @seo_keywords = " Foliwe Fossung SassPortfolio"
   end
 end
