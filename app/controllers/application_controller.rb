@@ -3,4 +3,5 @@ class ApplicationController < ActionController::Base
   include DeviseParams
   include SetSource
   include GuestUser
+  include DefaultPageContent
 end
