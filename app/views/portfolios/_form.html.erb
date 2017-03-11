@@ -1,0 +1,28 @@
+<%= form_for(portfolio) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subtitle %>
+    <%= f.text_field :subtitle %>
+  </div>
+   <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <ul>
+      <h4>Add Techology</h4>
+      <%= f.fields_for :technologies do |techno_item|%>
+    <li>
+      <%=techno_item.label :name%> 
+      <%=techno_item.text_field :name%> 
+    </li>
+    <%end%>
+  </ul>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
