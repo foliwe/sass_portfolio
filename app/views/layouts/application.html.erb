@@ -14,11 +14,12 @@
   <p class="alert"><%= alert %></p>
 
    <%= render "shared/nav", location: 'top'%>
-   <%= login_in_helper %>
+
+    <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
 
     <%= yield %>
-<% if session[:source] %>
-    Thanks for visiting me from <%= session[:source]%>
-    <%end%>
+
+<%=source_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+
   </body>
 </html>
