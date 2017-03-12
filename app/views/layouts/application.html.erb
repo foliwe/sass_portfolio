@@ -12,18 +12,19 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-   <%= render "shared/nav", location: 'top'%>
-
-    <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
-
-    <%= yield %>
-  <hr>
-    <p><%= copyrigthEngine %></p> <!-- LOCATED IN /helpers/application_helper.rb using Utaka_gem-->
-
-<%=source_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+  <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render "shared/application_nav", location: 'top'%>
+          <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+          <%= yield %>
+          <hr>
+          <p><%= copyrigthEngine %></p> <!-- LOCATED IN /helpers/application_helper.rb using Utaka_gem-->
+          <%=source_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+        </div>
+      </div>
+  </div>
 
   </body>
 </html>
