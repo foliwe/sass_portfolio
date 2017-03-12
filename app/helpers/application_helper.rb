@@ -16,5 +16,9 @@ module ApplicationHelper
     end
   end
   
+
+  def copyrigthEngine
+    UtakaViewTool::Renderer.copyright('SassPortfolio','All rights reserved' )
+  end
 end
 
