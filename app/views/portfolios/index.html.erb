@@ -1,6 +1,6 @@
 <h2>PORTFOLIO</h2>
 
-<p><%= link_to "New Portfolio", new_portfolio_path %></p>
+<p><%= link_to "New Portfolio", new_portfolio_path if logged_in?(:site_admin)%></p>
 
 <%= render @Portfolios%>
 <!--%= render partial: 'ptf_item',collection: @Portfolios%-->
