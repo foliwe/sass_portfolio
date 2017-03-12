@@ -10,17 +10,18 @@
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-  <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+    <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
 
     <%= yield %>
 
-<%= render "shared/nav", location: 'bottom'%>
+    <%= render "shared/nav", location: 'bottom'%>
 
-<% if session[:source] %>
-    Thanks for visiting me from <%= session[:source]%>
-    <%end%>
+    <%=source_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+
+    <p><%= copyrigthEngine %></p> <!-- LOCATED IN /helpers/application_helper.rb using Utaka_gem-->
+    
   </body>
 </html>
