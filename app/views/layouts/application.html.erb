@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> <%= @page_title %></title>
-    <%= csrf_meta_tags %>
-    <meta name="keywords" content="<%=@seo_keywords%>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+
+    <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-  <div class="site-wrapper">
+    <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <%= render "shared/application_nav", location: 'top'%>
-          <%= login_in_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+
+          <%= render "shared/application_nav" %>
+
           <%= yield %>
-          <hr>
-          <p><%= copyrigthEngine %></p> <!-- LOCATED IN /helpers/application_helper.rb using Utaka_gem-->
-          <%=source_helper %> <!-- LOCATED IN /helpers/application_helper.rb-->
+
+          <%= render "shared/footer"%>
+
+          <%= source_helper("application") %>
+
         </div>
       </div>
-  </div>
-
+    </div>
   </body>
 </html>
