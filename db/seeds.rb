@@ -27,7 +27,7 @@ end
     subtitle:"Ruby On Rails",
     body:"Heirloom mustache crucifix, succulents air plant four dollar toast roof party kogi hot chicken tousled blue bottle. Beard before they sold out chia snackwave. Seitan XOXO succulents, thundercats pickled cronut lumbersexual gentrify bicycle rights hoodie craft beer banh mi. Chillwave franzen sriracha jean shorts unicorn sustainable, gochujang flexitarian offal farm-to-table.",
     main_image:"http://placehold.it/800x400",
-    thumb_image:"http://placehold.it/350x150"
+    thumb_image:"http://placehold.it/356x280"
     )
   end
 
@@ -37,7 +37,7 @@ end
     subtitle:"Angular",
     body:"Heirloom mustache crucifix, succulents air plant four dollar toast roof party kogi hot chicken tousled blue bottle. Beard before they sold out chia snackwave. Seitan XOXO succulents, thundercats pickled cronut lumbersexual gentrify bicycle rights hoodie craft beer banh mi. Chillwave franzen sriracha jean shorts unicorn sustainable, gochujang flexitarian offal farm-to-table.",
     main_image:"http://placehold.it/800x400",
-    thumb_image:"http://placehold.it/350x150"
+    thumb_image:"http://placehold.it/356x280"
     )
   end
 

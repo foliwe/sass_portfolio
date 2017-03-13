@@ -1,8 +1,12 @@
-<h2>PORTFOLIO</h2>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
 
-<p><%= link_to "New Portfolio", new_portfolio_path if logged_in?(:site_admin)%></p>
-
-<%= render @Portfolios%>
-<!--%= render partial: 'ptf_item',collection: @Portfolios%-->
-    
+      
+      <%= render @Portfolios%>
+      <!--%= render partial: 'ptf_item',collection: @Portfolios%-->
+    </div>
+  </div>
+</div>
+          
 
