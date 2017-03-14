@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome";
+
 
 
 body {
@@ -59,3 +61,12 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+.social-links li {
+  font-size: 1.5em;
+}
+
+li.social-email{
+  font-size: 1em;
+}
+
