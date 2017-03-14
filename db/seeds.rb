@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+ kinta = User.create!(name: "Kunta Kinte", email: "kuntakinte@example.com", password: "password")
+ pop = User.create!(name: "Pop Pikin", email: "poppikin@example.com", password: "password")
+ foliwe = User.create!(name: "Foliwe Fossung", email: "foliwe@example.com", password: "password",roles: "site_admin")
+
+
 3.times do |topic|
   Topic.create!(title:"Topic#{topic}")
 end
@@ -26,7 +32,7 @@ end
     title:"My Portfolio Number#{ptf_item}",
     subtitle:"Ruby On Rails",
     body:"Heirloom mustache crucifix, succulents air plant four dollar toast roof party kogi hot chicken tousled blue bottle. Beard before they sold out chia snackwave. Seitan XOXO succulents, thundercats pickled cronut lumbersexual gentrify bicycle rights hoodie craft beer banh mi. Chillwave franzen sriracha jean shorts unicorn sustainable, gochujang flexitarian offal farm-to-table.",
-    main_image:"http://placehold.it/800x400",
+    main_image:"http://placehold.it/600x400",
     thumb_image:"http://placehold.it/356x280"
     )
   end
@@ -36,7 +42,7 @@ end
     title:"My Portfolio Number",
     subtitle:"Angular",
     body:"Heirloom mustache crucifix, succulents air plant four dollar toast roof party kogi hot chicken tousled blue bottle. Beard before they sold out chia snackwave. Seitan XOXO succulents, thundercats pickled cronut lumbersexual gentrify bicycle rights hoodie craft beer banh mi. Chillwave franzen sriracha jean shorts unicorn sustainable, gochujang flexitarian offal farm-to-table.",
-    main_image:"http://placehold.it/800x400",
+    main_image:"http://placehold.it/600x400",
     thumb_image:"http://placehold.it/356x280"
     )
   end
@@ -61,3 +67,4 @@ end
   puts "9 Portfolios created"
   puts "5 skills created"
   puts "3 Technologies created"
+  puts "3 Users created"
