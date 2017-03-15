@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 gem 'friendly_id', '~> 5.2'
