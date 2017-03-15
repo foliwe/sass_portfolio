@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'contact',to: 'pages#contact'
 
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
+  
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   get 'angular',to: 'portfolios#angular'
   resources :blogs do
