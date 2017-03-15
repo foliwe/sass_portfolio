@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
 
   def index
-    @Portfolios = Portfolio.all
+    @Portfolios = Portfolio.by_position
   end
 
   def angular
