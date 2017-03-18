@@ -5,4 +5,8 @@ class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
   validates_presence_of :title , :body
+
+  def self.latest
+    order("created_at DESC")
+  end
 end
