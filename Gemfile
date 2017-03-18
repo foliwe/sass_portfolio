@@ -16,6 +16,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # Use SCSS for stylesheets
 gem 'devise', '~> 4.2'
 gem 'sass-rails', '~> 5.0'

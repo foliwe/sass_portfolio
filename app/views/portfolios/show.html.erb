@@ -13,6 +13,11 @@
       <% @Portfolio.technologies.each do |techno| %>
       <p><%= techno.name %></p>
       <%end %>
+      <% if logged_in?(:site_admin) %>
+        <div class="">
+          <%= link_to "Edit Item", edit_portfolio_path(@Portfolio), class: 'btn btn-warning' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
