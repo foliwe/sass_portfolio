@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "jquery-ui";
+@import "gritter";
+
 
 
 
@@ -72,4 +74,10 @@ li.social-email{
 }
 .portfolio-form {
   padding: 20px;
+}
+
+/* Custom styles */
+
+.portfolio-container {
+  padding-top: 30px;
 }

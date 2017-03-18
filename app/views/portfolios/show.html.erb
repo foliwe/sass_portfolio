@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
       <%= image_tag @Portfolio.main_image unless @Portfolio.main_image.nil?%>
@@ -13,6 +13,11 @@
       <% @Portfolio.technologies.each do |techno| %>
       <p><%= techno.name %></p>
       <%end %>
+      <% if logged_in?(:site_admin) %>
+        <div class="">
+          <%= link_to "Edit Item", edit_portfolio_path(@Portfolio), class: 'btn btn-warning' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
