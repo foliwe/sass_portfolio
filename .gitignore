@@ -17,3 +17,4 @@
 .byebug_history
 # Secrete.yml file in git.
 /config/secrets.yml
+.env

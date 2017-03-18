@@ -20,7 +20,7 @@ module ApplicationHelper
 
   def copyrigthEngine
     
-    #àUtakaViewTool::Renderer.copyright('SassPortfolio','All rights reserved' )
+    UtakaViewTool::Renderer.copyright('SassPortfolio','All rights reserved' )
   end
 
   def nav_items
