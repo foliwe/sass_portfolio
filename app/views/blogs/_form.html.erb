@@ -20,6 +20,13 @@
                           )
     %>
   </div>
+  <div class="form-group">
+    <%= f.radio_button :post_status, 'draft' %>
+    <%= f.label :post_status, 'Draft' %>
+
+    <%= f.radio_button :post_status, 'published' %>
+    <%= f.label :post_status, 'Published' %>
+  </div>
 
   <div class="form-group">
     <%= f.label :body %>
