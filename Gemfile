@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 group :development, :test do
@@ -27,7 +28,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'devise', '~> 4.2'
@@ -43,3 +44,5 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick', '~> 4.6', '>= 4.6.1'
 gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'
